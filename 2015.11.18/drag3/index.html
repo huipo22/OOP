@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../../js/object.js"></script>
+	<script src="index.js"></script>
+	<script>
+	// $(function(){
+	// 	new drag(one)
+	// })
+	window.onload=function(){
+		new drag(one)
+	}
+	</script>
+	<style>
+	#box{
+		width: 500px;
+		height: 500px;
+		border: 1px solid red;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+	}
+	#one{
+		width: 200px;
+		height: 200px;
+		background: red;
+		position: absolute;
+	}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div id="one"></div>
+	</div>
+</body>
+</html>

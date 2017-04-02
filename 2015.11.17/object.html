@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>面向对象</title>
+	<script>
+	//构造函数方式 this
+/*	function person(name,age){
+		this.name=name;
+		this.age=age;
+		this.say=function(){
+			alert(this.name)
+		}
+	}
+
+	var zs=new person("zhangsan",19);
+	var ls=new person("lisi",20);
+	// zs.say();
+	// ls.say();
+	alert(zs.say==ls.say)*/
+/*	function person(name,age,role){
+		this.name=name;
+		this.age=age;
+		this.role=role;
+	}
+	// person.prototype={
+	// 	constructor:person,
+	// }
+	person.prototype.say=function(){
+		alert(this.name);
+	}
+	var xm=new person("小明",20,"student")
+	var xw=new person("小王",33,"student")
+	// xw.say();
+	// xm.say();
+	console.log(xm)
+	console.log(xm.say)
+	console.log(xw.say)
+	console.log(xm.constructor)
+	alert(xm.say==xw.say)*/
+	function person (name,age,role) {
+		this.name=name;
+		this.age=age;
+		this.role=role;
+		this.say=function() {
+			alert(this.name)
+		}
+	}
+	function student(name,age,role){
+		person.call(this,name,age,role);
+		// person.apply(this,[name,age,role])
+
+	}
+	var zhangsan=new student("张三",18,"student");
+	var lisi=new student("李四",10,"teacher")
+	// alert(zhangsan.role);
+	// alert(lisi.role)
+	lisi.say();
+	console.log(lisi)
+/*	function person(){
+		this.name="张三";
+		this.age=19;
+		this.say=function(){
+			alert(this.name);
+		}
+	}
+	
+	function student(){
+
+	}
+	student.prototype=new person();
+	var zhangsan=new student();
+	zhangsan.say();*/
+	// function person(name,age){
+	// 	this.name=name;
+	// 	this.age=age;
+	// 	this.say=function(){
+	//  		alert(this.name);
+	//  	}
+		
+	// }
+	// // person.prototype.say=function(){
+	// // 		alert(this.name);
+	// // 	}
+	// function student(name,age){
+	// 	this.name=name;
+	// 	this.age=age;
+	// 	// this.role=role;
+	// }
+	// student.prototype=new person();
+	// // console.log(student.prototype);
+	// var lisi=new student("李四",20)
+	// lisi.say();
+	// alert(lisi.age)
+	// console.log(lisi.age);
+	// function person(name,age){
+	// 	this.name=name;
+	// 	this.age=age;
+	// 	this.say=function(){
+	// 		alert(this.name)
+	// 	}
+	// }
+	// alert(this)
+	/*function student(name,age){
+		// person.call(this,name,age)
+		person.apply(this,[name,age])
+	}
+	var xl=new student("小李",34)
+	xl.say(); */
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

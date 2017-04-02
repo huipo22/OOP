@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="drag4.js"></script>
+	<script>
+	window.onload=function(){
+		// new drag(one,{side:true,animate:true});
+		drags(one,{side:true,animate:true})
+		console.log(drags(one,{side:true,animate:true}))
+	}
+	</script>
+	<style>
+	.box{
+		width: 900px;
+		height: 1000px;
+		border: 1px solid red;
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+	#one{
+		width: 200px;
+		height: 200px;
+		background: red;
+		position: absolute;
+	}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div id="one">qwqqwqwqwqwqwqwq</div>
+	</div>
+</body>
+</html>

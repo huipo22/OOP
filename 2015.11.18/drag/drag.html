@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>拖拽</title>
+	<script src="drag.js"></script>
+	<script>
+	window.onload=function(){
+
+		drag(one);
+	}
+	</script>
+	<style>
+	body{
+		margin: 0;
+		padding: 0;
+	}
+	#box{
+		width: 800px;
+		height: 800px;
+		border: 1px solid red;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		margin: 20px auto;
+	}
+	#one{
+		width: 300px;
+		height: 300px;
+		margin: 0 auto;
+		background: red;
+		position: absolute;
+	}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div id="one"></div>
+	</div>
+	
+</body>
+</html>

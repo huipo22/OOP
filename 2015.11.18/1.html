@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>原型</title>
+	<script>
+	/*function aa(){
+		console.log(this)
+	}
+	aa();*/
+
+/*	function aa(){
+		console.log(arguments);
+	}
+	var o={}
+	aa.call(o,1,2,3,4)*/
+/*	function bb(){
+		console.log(arguments.length);
+	}
+	var o={}
+	bb.call(o,2,2,2,2)*/
+	function myArray(){
+		//this代表arr  new出来的对象arr
+		this.length=arguments.length;
+		//this.length和arguments.length一样
+		for(var i=0;i<this.length;i++){
+			this[i]=arguments[i]
+		}
+		// console.log(this)
+		return this;
+	}
+
+	myArray.prototype.push=function(){
+		var len=this.length;
+		//arguments指元素
+		for(var i=0;i<arguments.length;i++){
+			this[len++]=arguments[i];
+		}
+		return this.length=len
+		// return this.length;
+		// return this;
+	}
+	myArray.prototype.max=function(){
+		//myArray就是this this和arr相等 myArray对象
+		// console.log(this)
+		// console.log(myArray)
+		//myArray是对象 this是内容
+		return Math.max.apply(myArray,this)
+	}
+	myArray.prototype.min=function(){
+		return Math.min.apply(myArray,this)
+	}
+	var arr=new myArray(1,2,3,4,5,13,23,45)
+	// arr.max();
+	console.log(arr.max())
+	arr.push(88,99,77)
+	// alert(arr.push(88,99,77))
+	console.log(arr.max())
+	// console.log(arr.push(88,99,77))
+	// alert(arr.length);
+	// console.log(arr.max())
+	// alert(arr.max())
+	// alert(arr.min())
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

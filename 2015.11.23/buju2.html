@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>布局2</title>
+	<style>
+	body{
+		margin: 0;
+	}
+	.main{
+		/*width: 100%;*/
+		min-width: 800px;
+		height: 400px;
+		background: #a50000;
+		margin-left: 200px;
+	}
+	.main .left{
+		width: 200px;
+		height: 100%;
+		background: yellow;
+		margin-left: -200px;
+		float: left;
+	}
+	.main .right{
+		width: 100%;
+		height: 100%;
+		background: blue;
+	}
+	.ll{
+		width: 500px;
+		height: 200px;
+		background: pink;
+	}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="left"></div>
+		<div class="right">
+			<!-- <div class="ll"></div> -->
+		</div>
+	</div>
+</body>
+</html>

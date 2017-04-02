@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>检测对象</title>
+	<script>
+	/*
+	检测 变量中存储的数据类型
+	isType(o,type)
+	type=[Array,Object.String,Number,Boolean,Function,Null,Undefined]
+	返回值:true false
+	*/
+	function isType(o,type){
+		if(Object.prototype.toString.call(o)=='[object '+type+']'){//注意'[object '  后面的空格
+			return true;
+		}
+		return false;
+	}
+	function isArray(o){
+		return isType(o,'Array');
+	}
+	function isObject(o){
+		return isType(o,'Object')
+	}
+	// var str={a:2}
+	var str=[2,3,4]
+	// alert(isType(str,"Number"))
+	alert(isArray(str))
+	// alert(isType(str,type))
+/*	function person(){
+		this.name="a";
+		this.play=function(){
+			alert('play')
+		}
+	}
+	function student(){
+		this.role="student";
+		this.study=function(){
+			alert("study")
+		}
+	}
+	student.prototype.eat=function(){
+		alert("eat");
+	}
+	function zhangsan(){
+		student.call(this)
+		person.call(this);
+	}
+	zhangsan.prototype=new student;
+	var zs=new zhangsan();
+	// alert(zs.name)
+	// alert(zs.role);
+	// zs.play();
+	// zs.study();
+	
+	// zhangsan.prototype.eat=student.prototype.eat;
+	zs.eat();*/
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

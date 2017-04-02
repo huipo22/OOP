@@ -1,0 +1,59 @@
+body,ul,li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body{
+	/*height: 2000px;*/
+}
+.banner{
+	width: 100%;
+	height: 900px;
+	background: url(../images/night_sky_background.jpg) no-repeat 0 0;
+	/*border: 1px solid red;*/
+	/*background-size: -10% -10%;*/
+	position: relative;
+	overflow: hidden;
+}
+.banner .moon{
+	width: 200px;
+	position: absolute;
+	top: 30px;
+	left: 8%;
+}
+.banner .nebula{
+	width: 300px;
+	position: absolute;
+	top: 30px;
+	left: 30%;
+}
+.banner .stars{
+	width: 200px;
+	position: absolute;;
+	top: 100px;
+	left: 32%;
+}
+.banner .bottom{
+	width: 120%;
+	position: absolute;
+	left: -10%;
+	bottom: -10%;
+}
+.banner .foreground{
+	width: 120%;
+	position: absolute;
+	left: -10%;
+	bottom: -10%;
+}
+.banner .left{
+	width: 300px;
+	position: absolute;
+	left: -4%;
+	bottom: -10%;
+}
+.banner .right{
+	width: 200px;
+	position: absolute;
+	right: -2%;
+	bottom: -10%;
+}

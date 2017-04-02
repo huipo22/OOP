@@ -1,0 +1,58 @@
+body,ul,li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color:#ccc;
+}
+html,body{
+	height: 100%;
+}
+.container{
+	width: 100%;
+	height:400%;
+	background: #ccc;
+}
+.container .floor{
+	width: 100%;
+	height: 25%;
+	font-size: 100px;
+	text-align: center;
+	line-height: 600px;
+}
+.f1{
+	background: pink;
+}
+.f2{
+	background: #a50000;
+}
+.f3{
+	background: yellow;
+}
+.f4{
+	background: #949400;
+}
+.nav{
+	width: 50px;
+	height: 240px;
+	position: fixed;
+	right: 30px;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+}
+.nav li{
+	width: 100%;
+	height: 50px;
+	background: #ccc;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 50%;
+	margin-bottom: 10px;
+}
+.nav .hot{
+	background: #a54000;
+	color: #fff;
+}

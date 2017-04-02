@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>布局</title>
+	<style>
+	body{
+		margin: 0;
+	}
+	.top{
+		width: 100%;
+		min-width: 1000px;
+		/*最小宽*/
+		height: 100px;
+		background: #009494;
+	}
+	.main{
+		/*width: 100%;*/
+		min-width: 800px;
+		/*父容器的最小宽*/
+		height: 300px;
+		background: red;
+		margin-left: 200px;
+	}
+	.main .left{
+		width: 200px;
+		height: 100%;
+		background: #a50000;
+		margin-left: -200px;
+		float: left;
+	}
+	.main .right{
+		width: 100%;
+		/*宽度100%*/
+		height: 100%;
+		background: blue;
+	}
+	</style>
+	<script>
+	window.onload=function(){
+		var main=document.getElementsByClassName("main")[0];
+		var clientH=document.documentElement.clientHeight;
+		main.style.height=clientH-100+"px";
+		window.onresize=function(){
+			var clientH=document.documentElement.clientHeight;
+			main.style.height=clientH-100+"px";
+		}
+	}
+	</script>
+</head>
+<body>
+	<div class="top">top</div>
+	<div class="main">
+		<div class="left">left</div>
+		<div class="right">right</div>
+	</div>
+</body>
+</html>
